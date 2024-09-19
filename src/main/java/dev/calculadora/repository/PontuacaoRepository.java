@@ -1,6 +1,5 @@
 package dev.calculadora.repository;
 
-import dev.calculadora.dtos.PontuacaoDTO;
 import dev.calculadora.models.Pontuacao;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
