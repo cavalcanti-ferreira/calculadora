@@ -1,0 +1,1 @@
+INSERT INTO ente_federativo (nome) VALUES ('Prefeitura Municipal de São Paulo');
