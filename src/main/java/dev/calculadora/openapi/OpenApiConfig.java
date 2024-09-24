@@ -13,13 +13,13 @@ public class OpenApiConfig {
 
     @Bean
     public OpenAPI openApiInformation() {
-        Server localServer = new Server().url("http://localhost:8080").description("Calculadora API Application");
+        Server localServer = new Server().url("https://calculadoraunivesp-latest.onrender.com").description("Calculadora API Application");
         Contact contact = new Contact().email("robson@email.com").name("Robson");
         Info info = new Info().contact(contact).description("The Calculadora Open API")
                 .summary("The Calculadora Open API").title("Calculadora API")
                 .version("V1.0.0").license(new License().name("Apache 2.0").url("http://springdoc.org"));
 
-        return new OpenAPI().info(info).addServersItem(localServer);
+        return new OpenAPI().info(info); //.addServersItem(localServer);
     }
 
 }

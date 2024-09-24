@@ -19,6 +19,8 @@ public class Pontuacao {
   @NotNull
   private String titulo;
 
+  private String nivel;
+
   private Float valorUnitario;
 
   private Float valorMaximo;

@@ -17,7 +17,8 @@ public class PontuacaoService {
   private final EnteFederativoRepository enteFederativoRepository;
 
   public List<PontuacaoDTO> findAll(Long enteFederativoId) {
-    var resultados = pontuacaoRepository.findAllById(enteFederativoId);
+    var ente = enteFederativoRepository.findById(enteFederativoId).orElseThrow();
+    var resultados = pontuacaoRepository.findAllByEnteFederativoId(ente);
 
     List<PontuacaoDTO> retrievedPontuacao = new ArrayList<>();
 

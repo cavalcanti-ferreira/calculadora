@@ -3,6 +3,7 @@ package dev.calculadora.controllers;
 import dev.calculadora.dtos.PontuacaoDTO;
 import dev.calculadora.service.PontuacaoService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,8 +15,8 @@ public class PontuacaoController {
   private final PontuacaoService pontuacaoService;
 
   @GetMapping
-  public List<PontuacaoDTO> findAllPontuacao(Long enteFederativoId) {
-    return pontuacaoService.findAll(enteFederativoId);
+  public ResponseEntity<List<PontuacaoDTO>> findAllPontuacao(Long enteFederativoId) {
+    return ResponseEntity.ok(pontuacaoService.findAll(enteFederativoId));
   }
 
   @PostMapping
